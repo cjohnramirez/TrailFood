@@ -10,6 +10,13 @@
       "request": "launch",
       "mainClass": "practice.Main",
       "vmArgs": "--module-path C:\\JavaFX\\lib --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "Another",
+      "request": "launch",
+      "mainClass": "practice.Another",
+      "vmArgs": "--module-path C:\\JavaFX\\lib --add-modules javafx.controls,javafx.fxml"
     }
   ]
 }
