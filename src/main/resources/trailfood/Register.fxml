@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trailfood.RegisterController">
+    <right>
+        <AnchorPane prefHeight="100.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="98.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../assets/logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+    <left>
+        <BorderPane prefHeight="100.0" prefWidth="540.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER">
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="720.0" style="-fx-spacing: 2;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Create New Account">
+                            <font>
+                                <Font name="DM Sans Medium" size="30.0" />
+                            </font>
+                        </Label>
+                        <Label text="Enter your account details">
+                            <font>
+                                <Font name="DM Sans Medium" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="20.0" />
+                            </padding>
+                        </Label>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="141.0" prefHeight="50.0" prefWidth="150.0" style="-fx-spacing: 20;">
+                     <children>
+                        <Label text="First Name">
+                           <font>
+                              <Font name="DM Sans Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstNameField" prefHeight="35.0" prefWidth="250.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="50.0" prefWidth="150.0" style="-fx-spacing: 20;">
+                     <children>
+                        <Label text="Last Name">
+                           <font>
+                              <Font name="DM Sans Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lastNameField" prefHeight="35.0" prefWidth="252.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="150.0" style="-fx-spacing: 20;">
+                            <children>
+                                <Label text="Username">
+                                    <font>
+                                        <Font name="DM Sans Medium" size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="userNameField" prefHeight="35.0" prefWidth="254.0">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font></TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="394.0" prefHeight="50.0" prefWidth="200.0" style="-fx-spacing: 20;">
+                            <children>
+                                <Label text="Password">
+                                    <font>
+                                        <Font name="DM Sans Medium" size="15.0" />
+                                    </font>
+                                </Label>
+                        <PasswordField fx:id="registerPasswordField" prefHeight="35.0" prefWidth="254.0" />
+                            </children>
+                        </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-spacing: 20;">
+                     <children>
+                        <Label text="Confirm Password">
+                           <font>
+                              <Font name="DM Sans Medium" size="15.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="confirmregisterPasswordField" prefHeight="35.0" prefWidth="192.0" />
+                     </children>
+                  </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="registerMessageLabel" textFill="#ff3a3a">
+                                    <font>
+                                        <Font name="DM Sans Regular" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Button fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonInAction" prefHeight="35.0" prefWidth="250.0" text="Register">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="cancelButton" alignment="CENTER" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="35.0" prefWidth="250.0" text="Close">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+                </VBox>
+            </center>
+            <top>
+                <BorderPane prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <left>
+                        <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 0 0 30; -fx-spacing: 20;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="logoImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../assets/logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="TrailFood">
+                                    <font>
+                                        <Font name="DM Sans Medium" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </HBox>
+                    </left>
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="360.0" style="-fx-padding: 20;" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonInAction" text="Back to Login">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </right>
+                </BorderPane>
+            </top>
+        </BorderPane>
+    </left>
+</BorderPane>
