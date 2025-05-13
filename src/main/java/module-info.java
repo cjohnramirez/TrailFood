@@ -8,4 +8,5 @@ module TrailFood {
     requires jdk.compiler;
 
     opens trailfood;
+    opens menu_page to javafx.fxml;
 }

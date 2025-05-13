@@ -76,6 +76,12 @@ public class LoginController implements Initializable {
             while (queryResult.next()){
                 if (queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("Login successful");
+                    try {
+                        MainApplication.changeScene("menu_page/MainPage.fxml");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        e.getCause();
+                    }
                 } else {
                     loginMessageLabel.setText("Invalid username or password. Try again.");
                 }

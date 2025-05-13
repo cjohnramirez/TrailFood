@@ -19,7 +19,7 @@
             <children>
                 <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="98.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../assets/logo.png" />
+                        <Image url="@../assets/logo.png" />
                     </image>
                 </ImageView>
             </children>
@@ -142,7 +142,7 @@
                             <children>
                                 <ImageView fx:id="logoImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../../../assets/logo.png" />
+                                        <Image url="@../assets/logo.png" />
                                     </image>
                                 </ImageView>
                                 <Label text="TrailFood">
