@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trailfood.MainPageController">
+   <left>
+      <BorderPane prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: e8e8e8;" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="40.0" prefWidth="217.0" style="-fx-spacing: 20;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="58.0" prefWidth="173.0" text="TrailFood">
+                     <font>
+                        <Font name="DM Sans Medium" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="530.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="menuPage" alignment="CENTER_LEFT" onMouseClicked="#menuPageOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-spacing: 20;">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/menu_page/menu.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Menu">
+                           <font>
+                              <Font name="DM Sans Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="historyPage" alignment="CENTER_LEFT" onMouseClicked="#historyPageOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-spacing: 20;">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/menu_page/history.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="History">
+                           <font>
+                              <Font name="DM Sans Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="inventoryPage" alignment="CENTER_LEFT" onMouseClicked="#inventoryPageOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-spacing: 20;">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/menu_page/bills.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Inventory">
+                           <font>
+                              <Font name="DM Sans Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="dashboardPage" alignment="CENTER_LEFT" onMouseClicked="#dashboardPageOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-spacing: 20;">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/menu_page/settings.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Dashboard">
+                           <font>
+                              <Font name="DM Sans Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox fx:id="logoutButton" alignment="CENTER_LEFT" onMouseClicked="#logoutButtonOnAction" prefHeight="42.0" prefWidth="217.0" style="-fx-spacing: 20;" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/menu_page/logout.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Logout">
+                     <font>
+                        <Font name="DM Sans Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <right>
+      <Pane fx:id="mainPane" prefHeight="700.0" prefWidth="968.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

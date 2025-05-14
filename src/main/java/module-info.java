@@ -4,8 +4,8 @@ module TrailFood {
     requires javafx.fxml;
     requires javafx.graphics;
     requires java.sql;
-    requires mysql.connector.j;
     requires jdk.compiler;
+    requires atlantafx.base;
 
     opens trailfood;
     opens menu_page to javafx.fxml;

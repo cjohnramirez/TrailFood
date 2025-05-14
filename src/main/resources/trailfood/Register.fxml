@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trailfood.RegisterController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trailfood.RegisterController">
     <right>
-        <AnchorPane prefHeight="100.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="98.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="112.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../assets/logo.png" />
                     </image>
@@ -26,7 +26,7 @@
         </AnchorPane>
     </right>
     <left>
-        <BorderPane prefHeight="100.0" prefWidth="540.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER">
+        <BorderPane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER">
             <center>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="720.0" style="-fx-spacing: 2;" BorderPane.alignment="CENTER">
                     <children>

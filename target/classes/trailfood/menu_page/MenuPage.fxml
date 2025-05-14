@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.MenuPageController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="639.0" prefWidth="740.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ScrollPane fitToWidth="true" prefHeight="532.0" prefWidth="740.0">
+                     <content>
+                        <GridPane fx:id="topGrid">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fitToWidth="true" prefHeight="239.0" prefWidth="740.0" GridPane.rowIndex="1">
+                     <content>
+                        <GridPane fx:id="bottomGrid">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </content></ScrollPane>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="700.0" prefWidth="255.0" spacing="5.0" style="-fx-background-color: e8e8e8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Details">
+               <font>
+                  <Font name="DM Sans Medium" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Order 01">
+               <font>
+                  <Font name="DM Sans Medium" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Tue, April 14 2025">
+               <font>
+                  <Font name="DM Sans Medium" size="15.0" />
+               </font>
+            </Label>
+            <Label text="6:33 PM">
+               <font>
+                  <Font name="DM Sans Medium" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="215.0" spacing="20.0">
+               <children>
+                  <Label style="-fx-background-color: -color-success-2;" text="Dine In">
+                     <font>
+                        <Font name="DM Sans Medium" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" style="-fx-background-color: -color-success-2;" text="Takeout">
+                     <font>
+                        <Font name="DM Sans Medium" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>

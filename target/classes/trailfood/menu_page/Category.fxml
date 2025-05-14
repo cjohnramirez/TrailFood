@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox onMouseClicked="#click" style="-fx-background-color: -color-success-2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.CategoryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <ImageView fx:id="categoryImage" fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../database/categories/breakfast.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label fx:id="categoryLabel" text="Breakfast">
+         <font>
+            <Font name="DM Sans Medium" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="categoryQuantityLabel" text="13 items">
+         <font>
+            <Font name="DM Sans Regular" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

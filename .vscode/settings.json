@@ -14,5 +14,6 @@
         "c:\\JavaFX\\lib\\jdk.jsobject.jar",
         "c:\\JavaFX\\lib\\jfx.incubator.input.jar",
         "c:\\JavaFX\\lib\\jfx.incubator.richtext.jar"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

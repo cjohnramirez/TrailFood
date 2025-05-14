@@ -37,12 +37,9 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        File logoFile = new File("assets/logo.png");
+        File logoFile = new File("src/main/resources/assets/logo.png");
         Image logoImage = new Image(logoFile.toURI().toString());
         logoImageView.setImage(logoImage);
-
-        File brandingFile = new File("assets/logo.png");
-        Image brandingImage = new Image(logoFile.toURI().toString());
         brandingImageView.setImage(logoImage);
     }
 
@@ -77,7 +74,7 @@ public class LoginController implements Initializable {
                 if (queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("Login successful");
                     try {
-                        MainApplication.changeScene("menu_page/MainPage.fxml");
+                        MainApplication.changeScene("MainPage.fxml");
                     } catch (Exception e) {
                         e.printStackTrace();
                         e.getCause();

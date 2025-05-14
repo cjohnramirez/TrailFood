@@ -12,13 +12,15 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
+import atlantafx.base.theme.PrimerLight;
+
 public class MainApplication extends Application {
     private static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) throws IOException {
         MainApplication.primaryStage = primaryStage;
         FXMLLoader primaryFXML = new FXMLLoader(MainApplication.class.getResource("Login.fxml"));
-        Scene primaryScene = new Scene(primaryFXML.load(), 1080, 600);
+        Scene primaryScene = new Scene(primaryFXML.load(), 1180, 700);
 
         primaryStage.initStyle(
                 StageStyle.UNDECORATED
@@ -30,6 +32,8 @@ public class MainApplication extends Application {
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((screenBounds.getWidth() - primaryStage.getWidth()) / 2);
         primaryStage.setY((screenBounds.getHeight() - primaryStage.getHeight()) / 2);
+
+        Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
     }
 
     public static void changeScene(String fxml) throws IOException {

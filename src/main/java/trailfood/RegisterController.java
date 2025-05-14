@@ -11,12 +11,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -46,12 +44,9 @@ public class RegisterController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        File logoFile = new File("assets/logo.png");
+        File logoFile = new File("src/main/resources/assets/logo.png");
         Image logoImage = new Image(logoFile.toURI().toString());
         logoImageView.setImage(logoImage);
-
-        File brandingFile = new File("assets/logo.png");
-        Image brandingImage = new Image(logoFile.toURI().toString());
         brandingImageView.setImage(logoImage);
     }
 
@@ -89,7 +84,7 @@ public class RegisterController implements Initializable {
 
             try {
                 Statement statement = connectDB.createStatement();
-                int queryResult = statement.executeUpdate(insertToRegister);
+                statement.executeUpdate(insertToRegister);
 
                 registerMessageLabel.setText("User has been registered successfully");
 

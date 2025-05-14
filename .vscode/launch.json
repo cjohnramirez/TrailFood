@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainApplication",
+      "request": "launch",
+      "mainClass": "TrailFood/trailfood.MainApplication",
+      "projectName": "TrailFood"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "practice.Main",
