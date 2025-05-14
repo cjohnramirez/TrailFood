@@ -20,13 +20,13 @@ public class CategoryController {
 
     @FXML
     private void click(MouseEvent mouseEvent){
-        categoryListener.onClickListener(category);
+        categoryListener.onClickCategoryListener(category);
     }
 
     private Category category;
-    private CategoryListener categoryListener;
+    private MenuPageListener categoryListener;
 
-    public void setData(Category category, CategoryListener categoryListener) {
+    public void setData(Category category, MenuPageListener categoryListener) {
         this.category = category;
         this.categoryListener = categoryListener;
         categoryLabel.setText(category.getName());

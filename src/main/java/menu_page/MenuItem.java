@@ -4,8 +4,7 @@ public class MenuItem {
   private String name;
   private String price;
   private String image;
-  private String quantity;
-
+  
   public String getName() {
     return name;
   }
@@ -28,13 +27,5 @@ public class MenuItem {
 
   public void setImage(String image) {
     this.image = image;
-  }
-
-  public String getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(String quantity) {
-    this.quantity = quantity;
   }
 }
