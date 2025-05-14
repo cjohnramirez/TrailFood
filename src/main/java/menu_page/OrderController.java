@@ -1,8 +1,12 @@
 package menu_page;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import trailfood.MainApplication;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +27,28 @@ public class OrderController {
 
   @FXML
   private VBox orderItemsVBox;
+
+  @FXML
+  private Label placeOrderLabel;
+
+  @FXML
+  public void setPlaceOrderLabelOnAction() {
+    placeOrderLabel.setOnMouseClicked(event -> {
+      try {
+        FXMLLoader fxmlLoader = new FXMLLoader(
+            MainApplication.class.getResource("/trailfood/menu_page/PlacePayment.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Stage stage = new Stage();
+        stage.setTitle("Place Payment");
+        stage.setScene(new Scene(root));
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    });
+  }
 
   private final Map<String, OrderItem> orderItems = new HashMap<>();
   
@@ -48,7 +74,6 @@ public class OrderController {
     }
 
     displayOrders();
-    printOrderItems();  
   }
 
   public void deleteOrderItem(MenuItem menuItem) {
@@ -59,17 +84,6 @@ public class OrderController {
       orderItems.remove(name);
       displayOrders();
     }
-    
-    printOrderItems();
-  }
-
-  public void printOrderItems() {
-    System.out.println("--------------------------");
-    for (OrderItem item : orderItems.values()) {
-      System.out.println("Order Item: " + item.getOrderItemName() + ", Quantity: " + item.getQuantity() + ", Price: "
-          + item.getPrice());
-    }
-    System.out.println("--------------------------");
   }
 
   public void displayOrders(){

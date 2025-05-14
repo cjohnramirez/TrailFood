@@ -105,9 +105,9 @@ public class MenuPageController implements Initializable {
     try {
       FXMLLoader fxmlLoader = new FXMLLoader(
           MainApplication.class.getResource("/trailfood/menu_page/Order.fxml"));
-      VBox vBox = fxmlLoader.load();
+      BorderPane borderPane = fxmlLoader.load();
       orderController = fxmlLoader.getController();
-      orderVBox.getChildren().add(vBox);
+      orderVBox.getChildren().add(borderPane);
     } catch (Exception e) {
       e.printStackTrace();
     }

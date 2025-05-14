@@ -3,56 +3,68 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="255.0" style="-fx-background-color: e8e8e8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.OrderController">
-   <children>
-      <Label text="Current Order">
-         <font>
-            <Font name="DM Sans Medium" size="12.0" />
-         </font>
-      </Label>
-      <Label text="Order ID 1">
-         <font>
-            <Font name="DM Sans Medium" size="20.0" />
-         </font>
-      </Label>
-      <Label text="Tuesday, April 14 2025">
-         <font>
-            <Font name="DM Sans Medium" size="12.0" />
-         </font>
-      </Label>
-      <Label text="11:18 PM GMT +8">
-         <font>
-            <Font name="DM Sans Medium" size="12.0" />
-         </font>
-      </Label>
-      <HBox prefHeight="42.0" prefWidth="215.0" spacing="10.0">
-         <padding>
-            <Insets bottom="20.0" top="20.0" />
-         </padding>
+<BorderPane prefHeight="700.0" style="-fx-background-color: e8e8e8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.OrderController">
+   <center>
+      <VBox>
          <children>
-            <Label style="-fx-background-color: -color-accent-2;" text="Dine In">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
+            <Label text="Current Order">
+               <font>
+                  <Font name="DM Sans Medium" size="12.0" />
+               </font>
             </Label>
-            <Label style="-fx-background-color: -color-accent-2;" text="Takeout">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
+            <Label text="Order ID 1">
+               <font>
+                  <Font name="DM Sans Medium" size="20.0" />
+               </font>
             </Label>
+            <Label text="Tuesday, April 14 2025">
+               <font>
+                  <Font name="DM Sans Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label text="11:18 PM GMT +8">
+               <font>
+                  <Font name="DM Sans Medium" size="12.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="42.0" prefWidth="215.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label style="-fx-background-color: -color-accent-2;" text="Dine In">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label style="-fx-background-color: -color-accent-2;" text="Takeout">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane fitToWidth="true">
+               <content>
+                  <VBox fx:id="orderItemsVBox" spacing="10.0" />
+               </content>
+            </ScrollPane>
          </children>
-      </HBox>
-      <ScrollPane fitToWidth="true">
-         <content>
-            <VBox fx:id="orderItemsVBox" spacing="10.0" />
-         </content>
-      </ScrollPane>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+      </VBox>
+   </center>
+   <bottom>
+      <Label fx:id="placeOrderLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" onMouseClicked="#setPlaceOrderLabelOnAction" style="-fx-background-color: -color-accent-2;" text="Place Order" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
