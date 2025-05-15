@@ -35,6 +35,11 @@ The TrailFood cashier system supports:
 
 - JavaFx and Stage Builder for Frontend and MySQL for Backend
 
+## 📷 Screenshots
+
+![Main Page](image-1.png)
+![Login Page](image-2.png)
+
 ## 📁 Project Setup
 
 - Laturrrr
