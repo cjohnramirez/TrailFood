@@ -45,7 +45,7 @@ public class MenuItemController {
     this.menuItem = menuItem;
     this.menuItemListener = menuItemListener;
     itemNameLabel.setText(menuItem.getName());
-    itemPriceLabel.setText(menuItem.getPrice());
+    itemPriceLabel.setText("PHP " + menuItem.getPrice());
 
     // fail-safe for any files reading, use this
     InputStream is = getClass().getResourceAsStream(menuItem.getImage());
@@ -57,5 +57,9 @@ public class MenuItemController {
       itemImage.setFitWidth(150);
       itemImage.setPreserveRatio(false);
     }
+  }
+
+  public void setItemQuantityLabel(int quantity) {
+    itemQuantityLabel.setText("Qty: " + String.valueOf(quantity));
   }
 }

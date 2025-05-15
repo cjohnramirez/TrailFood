@@ -1,18 +1,34 @@
 package menu_page;
 
-import java.sql.Date;
-
 public class Order {
-  private int orderId;
   private double orderPrice;
-  private Date orderDate;
+  private String orderOption;
+  private double orderPaymentAmount;
+  private String orderPaymentMethod;
+  private String orderDate;
 
-  public void setOrderId(int orderId) {
-    this.orderId = orderId;
+  public String getOrderOption() {
+    return orderOption;
   }
 
-  public int getOrderId() {
-    return orderId;
+  public void setOrderOption(String orderOption) {
+    this.orderOption = orderOption;
+  }
+
+  public double getOrderPaymentAmount() {
+    return orderPaymentAmount;
+  }
+
+  public void setOrderPaymentAmount(double orderPaymentAmount) {
+    this.orderPaymentAmount = orderPaymentAmount;
+  }
+
+  public String getOrderPaymentMethod() {
+    return orderPaymentMethod;
+  }
+
+  public void setOrderPaymentMethod(String orderPaymentMethod) {
+    this.orderPaymentMethod = orderPaymentMethod;
   }
 
   public double getOrderPrice() {
@@ -23,11 +39,11 @@ public class Order {
     this.orderPrice = orderPrice;
   }
 
-  public Date getOrderDate() {
+  public String getOrderDate() {
     return orderDate;
   }
 
-  public void setOrderDate(Date orderDate) {
+  public void setOrderDate(String orderDate) {
     this.orderDate = orderDate;
   }
 }

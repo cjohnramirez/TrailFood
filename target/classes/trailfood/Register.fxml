@@ -17,7 +17,7 @@
     <right>
         <AnchorPane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="112.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="brandingImageView" fitHeight="350.0" fitWidth="350.0" layoutX="115.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../assets/logo.png" />
                     </image>
@@ -113,7 +113,7 @@
                                 </Label>
                             </children>
                         </HBox>
-                        <Button fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonInAction" prefHeight="35.0" prefWidth="250.0" text="Register">
+                        <Button fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonInAction" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: -color-accent-2;" text="Register">
                             <font>
                                 <Font size="15.0" />
                             </font>
@@ -159,7 +159,7 @@
                     <right>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="360.0" style="-fx-padding: 20;" BorderPane.alignment="CENTER">
                             <children>
-                                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonInAction" text="Back to Login">
+                                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonInAction" style="-fx-background-color: -color-accent-2;" text="Back to Login">
                                     <font>
                                         <Font size="15.0" />
                                     </font>

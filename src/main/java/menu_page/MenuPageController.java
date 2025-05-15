@@ -127,6 +127,7 @@ public class MenuPageController implements Initializable {
                 MainApplication.class.getResource("/trailfood/menu_page/MenuItem.fxml"));
             VBox vBox = fxmlLoader.load();
 
+            MenuItemController menuItemController = fxmlLoader.getController();
             MenuItemListener menuItemListener = new MenuItemListener() {
               int quantity = 0;
               boolean isDeleted = false;
@@ -135,6 +136,7 @@ public class MenuPageController implements Initializable {
               public void incrementQuantityListener(MenuItem menuItem) {
                 if (quantity >= 0) {
                   quantity++;
+                  menuItemController.setItemQuantityLabel(quantity);
                   finalOrderController.updateOrderItem(menuItem, quantity);
                 }
               }
@@ -143,20 +145,20 @@ public class MenuPageController implements Initializable {
               public void decrementQuantityListener(MenuItem menuItem) {
                 if (quantity > 1) {
                   quantity--;
+                  menuItemController.setItemQuantityLabel(quantity);
                   finalOrderController.updateOrderItem(menuItem, quantity);
                 } else {
+                  menuItemController.setItemQuantityLabel(0);
                   finalOrderController.deleteOrderItem(menuItem);
                   isDeleted = true;
-                } 
+                }
 
                 if (isDeleted) {
                   System.out.println("Item is deleted!");
                   isDeleted = false;
-                } 
+                }
               }
             };
-
-            MenuItemController menuItemController = fxmlLoader.getController();
             menuItemController.setData(item, menuItemListener);
 
             if (col == 3) {

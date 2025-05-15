@@ -16,6 +16,8 @@ import atlantafx.base.theme.PrimerLight;
 
 public class MainApplication extends Application {
     private static Stage primaryStage;
+    private static int USER_ID = 0;
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         MainApplication.primaryStage = primaryStage;
@@ -39,6 +41,14 @@ public class MainApplication extends Application {
     public static void changeScene(String fxml) throws IOException {
         Parent pane = FXMLLoader.load(Objects.requireNonNull(MainApplication.class.getResource(fxml)));
         primaryStage.getScene().setRoot(pane);
+    }
+
+    public static void setUserId(int userName) {
+        MainApplication.USER_ID = userName;
+    }
+
+    public static int getUserId() {
+        return USER_ID;
     }
 
     public static void main(String[] args) {

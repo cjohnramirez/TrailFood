@@ -27,7 +27,7 @@ public class MainPageController implements Initializable {
   @FXML
   private HBox dashboardPage;
 
-  @FXML 
+  @FXML
   private HBox logoutButton;
 
   @FXML
@@ -46,7 +46,8 @@ public class MainPageController implements Initializable {
   public void historyPageOnAction(MouseEvent event) {
     mainPane.getChildren().clear();
     try {
-      FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/trailfood/history_page/HistoryPage.fxml"));
+      FXMLLoader fxmlLoader = new FXMLLoader(
+          MainApplication.class.getResource("/trailfood/history_page/HistoryPage.fxml"));
       Pane pane = fxmlLoader.load();
       mainPane.getChildren().add(pane);
     } catch (IOException e) {
@@ -58,19 +59,21 @@ public class MainPageController implements Initializable {
   public void inventoryPageOnAction(MouseEvent event) {
     mainPane.getChildren().clear();
     try {
-      FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/trailfood/inventory_page/InventoryPage.fxml"));
+      FXMLLoader fxmlLoader = new FXMLLoader(
+          MainApplication.class.getResource("/trailfood/inventory_page/InventoryPage.fxml"));
       Pane pane = fxmlLoader.load();
       mainPane.getChildren().add(pane);
     } catch (IOException e) {
       e.printStackTrace();
     }
   }
-  
+
   @FXML
   public void dashboardPageOnAction(MouseEvent event) {
     mainPane.getChildren().clear();
     try {
-      FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/trailfood/dashboard_page/DashboardPage.fxml"));
+      FXMLLoader fxmlLoader = new FXMLLoader(
+          MainApplication.class.getResource("/trailfood/dashboard_page/DashboardPage.fxml"));
       Pane pane = fxmlLoader.load();
       mainPane.getChildren().add(pane);
     } catch (IOException e) {
@@ -88,16 +91,15 @@ public class MainPageController implements Initializable {
     }
   }
 
-
   @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {  
-      try {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/trailfood/menu_page/MenuPage.fxml"));
-        Pane pane = fxmlLoader.load();
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    try {
+      FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/trailfood/menu_page/MenuPage.fxml"));
+      Pane pane = fxmlLoader.load();
 
-        mainPane.getChildren().add(pane);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
+      mainPane.getChildren().add(pane);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 }
