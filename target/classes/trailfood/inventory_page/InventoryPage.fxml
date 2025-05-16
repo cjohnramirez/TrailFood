@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="960.0" spacing="20.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_page.InventoryController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="960.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="inventory_page.InventoryController">
    <children>
       <HBox alignment="CENTER_LEFT" spacing="20.0">
          <children>
@@ -21,7 +21,7 @@
             <TextField fx:id="searchTextField" maxWidth="-Infinity" prefHeight="37.0" prefWidth="393.0" />
          </children>
       </HBox>
-      <TableView fx:id="inventoryTableView" prefHeight="513.0" prefWidth="880.0">
+      <TableView fx:id="inventoryTableView" prefHeight="567.0" prefWidth="880.0">
         <columns>
           <TableColumn fx:id="itemIdTableColumn" prefWidth="86.0" text="Item ID" />
           <TableColumn fx:id="itemNameTableColumn" prefWidth="177.33331298828125" text="Item Name" />
@@ -31,14 +31,6 @@
             <TableColumn fx:id="itemImageTableColumn" prefWidth="140.0" text="Item Image" />
         </columns>
       </TableView>
-      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" style="-fx-background-color: -color-success-2;" text="Add Item to Inventory" textAlignment="RIGHT">
-         <font>
-            <Font name="DM Sans Regular" size="12.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </Label>
    </children>
    <padding>
       <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
