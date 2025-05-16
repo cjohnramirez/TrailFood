@@ -1,9 +1,13 @@
 package menu_page;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import trailfood.DatabaseConnector;
 import trailfood.MainApplication;
 import java.util.ArrayList;
@@ -16,6 +20,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 
 public class PlacePaymentController {
   @FXML
@@ -40,7 +46,7 @@ public class PlacePaymentController {
   private Label paymentAmountStatusLabel;
 
   private String paymentMethod = "Cash";
-  private String orderOption = "Takeaway";
+  private String orderOption = "Dine In";
   private Order order = new Order();
   private final List<OrderItem> orderItems = new ArrayList<>();
   public int newRow = 0;
@@ -59,9 +65,6 @@ public class PlacePaymentController {
 
     ((Label) event.getSource()).setStyle("-fx-background-color: -color-success-2;");
     paymentMethod = ((Label) event.getSource()).getText();
-    System.out.println("Payment method: " + paymentMethod);
-    System.out.println("Payment amount: " + paymentAmountTextField.getText());
-    System.out.println("User name: " + MainApplication.getUserId());
   }
 
   @FXML
@@ -80,10 +83,10 @@ public class PlacePaymentController {
         paymentAmountStatusLabel.setText("Insufficient payment amount");
         paymentAmountStatusLabel.setStyle("-fx-text-fill: -color-danger-5;");
       } else {
-        saveOrder();
         paymentAmountStatusLabel.setText("Payment successful");
         paymentAmountStatusLabel.setStyle("-fx-text-fill: -color-success-5;");
-        System.out.println("Payment successful. Amount: " + enteredAmount);
+        saveOrder();
+        displayOrders();
       }
     } catch (NumberFormatException e) {
       paymentAmountStatusLabel.setText("Please enter a valid number.");
@@ -107,10 +110,7 @@ public class PlacePaymentController {
 
     for (OrderItem orderItem : orderItems) {
       order.setOrderPrice(order.getOrderPrice() + (orderItem.getPrice() * orderItem.getQuantity()));
-      System.out.println("Order item: " + orderItem.getOrderItemName() + ", Price: " + orderItem.getPrice() +
-          ", Quantity: " + orderItem.getQuantity());
     }
-    System.out.println("Total order price: " + order.getOrderPrice());
   }
 
   public void setOrderOptions(String orderOption) {
@@ -143,10 +143,7 @@ public class PlacePaymentController {
       ResultSet generatedKeys = statement.getGeneratedKeys();
       if (generatedKeys.next()) {
         newRow = generatedKeys.getInt(1);
-      } else {
-        System.out.println("Creating order failed, no ID obtained.");
       }
-      System.out.println("Order saved successfully");
       saveOrderItems();
     } catch (Exception e) {
       e.printStackTrace();
@@ -167,7 +164,6 @@ public class PlacePaymentController {
         while (statement.getResultSet().next()) {
           menuItemId = statement.getResultSet().getInt("menu_item_id");
         }
-        System.out.println("Menu item ID Saved: " + menuItemId);
       } catch (Exception e) {
         e.printStackTrace();
         e.getCause();
@@ -182,11 +178,38 @@ public class PlacePaymentController {
       try {
         Statement statement = connection.createStatement();
         statement.executeUpdate(insertOrderItemQuery);
-        System.out.println("Order items saved successfully");
       } catch (Exception e) {
         e.printStackTrace();
         e.getCause();
       }
+    }
+  }
+
+  public void displayOrders() {
+    try {
+      FXMLLoader fxmlLoader = new FXMLLoader(
+          MainApplication.class.getResource("/trailfood/menu_page/PaymentSuccessful.fxml"));
+      Parent root = fxmlLoader.load();
+
+      PaymentSuccessfulController paymentSuccessfulController = fxmlLoader.getController();
+      paymentSuccessfulController.setTotalPaymentAmountLabel(order.getOrderPaymentAmount());
+      paymentSuccessfulController.setTotalOrderCostLabel(order.getOrderPrice());
+      paymentSuccessfulController.setOrderItemsScrollPane(orderItems);
+
+      Stage stage = (Stage) placePaymentLabel.getScene().getWindow();
+      stage.close();
+
+      Stage newStage = new Stage();
+      newStage.setTitle("Place Payment");
+      newStage.setScene(new Scene(root));
+      newStage.initStyle(StageStyle.UNDECORATED);
+      newStage.showAndWait();
+
+      Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+      newStage.setX((screenBounds.getWidth() - newStage.getWidth()) / 2);
+      newStage.setY((screenBounds.getHeight() - newStage.getHeight()) / 2);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
   }
 }

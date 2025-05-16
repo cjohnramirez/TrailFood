@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="history_page.HistoryOrderItemController">
+   <children>
+      <ImageView fx:id="orderItemImageView" fitHeight="100.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox alignment="CENTER_LEFT">
+         <children>
+            <Label fx:id="orderItemNameLabel" text="Order Item">
+               <font>
+                  <Font name="DM Sans Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="orderItemPriceLabel" text="Order price">
+               <font>
+                  <Font name="DM Sans Regular" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="orderItemQuantityLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="365.0" text="Order number of quantity">
+               <font>
+                  <Font name="DM Sans Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>

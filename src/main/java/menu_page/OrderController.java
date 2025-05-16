@@ -57,7 +57,6 @@ public class OrderController {
 
     ((Label) event.getSource()).setStyle("-fx-background-color: -color-success-2;");
     orderOption = ((Label) event.getSource()).getText();
-    System.out.println("Order option: " + orderOption);
   }
 
   @FXML
@@ -76,6 +75,7 @@ public class OrderController {
 
       PlacePaymentController placePaymentController = fxmlLoader.getController();
       placePaymentController.setOrderItems(orderItems);
+      placePaymentController.setOrderOptions(orderOption);
 
       Stage stage = new Stage();
       stage.setTitle("Place Payment");

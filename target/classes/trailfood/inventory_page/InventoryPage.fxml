@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" />
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="960.0" spacing="20.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_page.InventoryController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Search Inventory">
+               <font>
+                  <Font name="DM Sans Medium" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchTextField" maxWidth="-Infinity" prefHeight="37.0" prefWidth="393.0" />
+         </children>
+      </HBox>
+      <TableView fx:id="inventoryTableView" prefHeight="513.0" prefWidth="880.0">
+        <columns>
+          <TableColumn fx:id="itemIdTableColumn" prefWidth="86.0" text="Item ID" />
+          <TableColumn fx:id="itemNameTableColumn" prefWidth="177.33331298828125" text="Item Name" />
+            <TableColumn fx:id="itemDescriptionTableColumn" prefWidth="218.99996948242188" text="Item Descriotion" />
+            <TableColumn fx:id="itemPriceTableColumn" prefWidth="125.3333740234375" text="Item Price" />
+            <TableColumn fx:id="itemCategoryTableColumn" prefWidth="134.6666259765625" text="Item Category" />
+            <TableColumn fx:id="itemImageTableColumn" prefWidth="140.0" text="Item Image" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" style="-fx-background-color: -color-success-2;" text="Add Item to Inventory" textAlignment="RIGHT">
+         <font>
+            <Font name="DM Sans Regular" size="12.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+</VBox>

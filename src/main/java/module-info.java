@@ -9,4 +9,6 @@ module TrailFood {
 
     opens trailfood;
     opens menu_page to javafx.fxml;
+    opens inventory_page to javafx.fxml, javafx.base;
+    opens history_page to javafx.fxml, javafx.base;
 }

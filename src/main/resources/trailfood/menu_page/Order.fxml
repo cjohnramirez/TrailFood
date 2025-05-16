@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="700.0" style="-fx-background-color: e8e8e8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.OrderController">
+<BorderPane prefHeight="700.0" style="-fx-background-color: e8e8e8;"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.OrderController">
    <center>
       <VBox>
          <children>

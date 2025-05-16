@@ -1,11 +1,16 @@
 package menu_page;
 
 public class Order {
+  private String orderId;
   private double orderPrice;
   private String orderOption;
   private double orderPaymentAmount;
   private String orderPaymentMethod;
   private String orderDate;
+
+  public String getOrderId() {
+    return orderId;
+  }
 
   public String getOrderOption() {
     return orderOption;
@@ -17,6 +22,10 @@ public class Order {
 
   public double getOrderPaymentAmount() {
     return orderPaymentAmount;
+  }
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
   }
 
   public void setOrderPaymentAmount(double orderPaymentAmount) {

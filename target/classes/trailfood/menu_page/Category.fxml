@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox onMouseClicked="#click" style="-fx-background-color: -color-accent-2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.CategoryController">
+<VBox onMouseClicked="#click" style="-fx-background-color: -color-accent-2;"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu_page.CategoryController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>

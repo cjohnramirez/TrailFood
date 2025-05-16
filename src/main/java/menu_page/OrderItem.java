@@ -4,6 +4,15 @@ public class OrderItem {
   private String orderItemName;
   private int quantity;
   private double price;
+  private String imagePath;
+
+  public String getImagePath() {
+    return imagePath;
+  }
+
+  public void setImagePath(String imagePath) {
+    this.imagePath = imagePath;
+  }
 
   public String getOrderItemName() {
     return orderItemName;

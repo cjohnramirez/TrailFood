@@ -154,7 +154,6 @@ public class MenuPageController implements Initializable {
                 }
 
                 if (isDeleted) {
-                  System.out.println("Item is deleted!");
                   isDeleted = false;
                 }
               }
